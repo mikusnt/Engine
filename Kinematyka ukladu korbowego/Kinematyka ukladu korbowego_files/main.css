@@ -1,0 +1,55 @@
+html {
+    overflow: hidden;
+    border: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+body {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.cookieInfo {
+    background: #505050;
+    border-radius: 5px;
+    color: #fff;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 12px;
+    height: 84px;
+    position: relative;
+    width: 340px;
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.7);
+}
+
+.cookieInfo .closeBtn {
+    background: url('//ocdn.eu/files/pulscms/NGI7MDA_/721af0f4d4279a344ccba79b69958ded.png') no-repeat -407px -54px;
+    height: 10px;
+    position: absolute;
+    top: 8px;
+    right: 7px;
+    text-indent: -9999px;
+    width: 10px;
+}
+
+.cookieInfo .text {
+    line-height: 20px;
+    padding: 10px;
+    word-spacing: -1px;
+}
+
+@media only screen and (max-width: 390px) {
+    .cookieInfo {
+        height: auto;
+        margin: 0 2px;
+        width: 98%;
+    }
+}

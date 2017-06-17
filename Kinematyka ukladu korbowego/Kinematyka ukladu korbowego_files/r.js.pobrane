@@ -1,0 +1,642 @@
+z12318c022f(window, 'onload', z0df72288fe);
+var z17598f85ed = Math.round(10000 * Math.random()) + '_' + (new Date()).getTime();
+var za316a0c349;
+var zf721d3ae0f;
+var z06cacefa08 = 10;
+var za82d863b26 = 1;
+var z7d465d2c37 = 300;
+var z4b39d16b8a = 0;
+var zc34c7804ad = 32 + 330 + 188;
+var zb26f5eecf9 = null;
+var z72368ec77c = 0;
+var z49e00b25ea = new Array();
+var z0bad0a0635 = 0;
+var zdb808535b3 = 10;
+var z76399f8cd5 = null;
+var zbf6983e1ef = null;
+var zedabc27e59 = 0;
+var zf0b019a197 = 'http://republika.onet.pl/';
+
+if (document.all && !window.ze485f859ed) {
+	var z288caec587 = 1;
+} else {
+	var z288caec587 = 0;
+}
+
+function z2881bfd9f9() {
+	var z15f44b373f = document.location.href;
+
+	if (z15f44b373f.indexOf('test.onet.pl/') >= 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function zae3257ab6e() {
+	var z15f44b373f = document.location.href;
+	var zde8ce43185 = document.referrer;
+	var z3209cc38cc = window.top.location;
+	if ((z15f44b373f.indexOf('test.onet.pl/') >= 0 || z15f44b373f.indexOf('ovh.org/') >= 0) && zde8ce43185.length == 0) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function zeb15402489(zadd1d4cab8) {
+	return document.getElementById(zadd1d4cab8);
+}
+
+function z9f32e84895(n) {
+	return n;
+}
+
+function z0e15bc2e85(z1fa6faf525) {
+	var children = z1fa6faf525.childNodes;
+	if (children && children.length > 0) {
+		for (var zce99d8264d = 0; zce99d8264d < children.length; zce99d8264d++) {
+			var z7c97567ae4 = children[zce99d8264d];
+			if (z7c97567ae4.style && z7c97567ae4.style.zIndex > z7d465d2c37) {
+				z7d465d2c37 = z7c97567ae4.style.zIndex;
+			}
+			if (z7c97567ae4.nodeType == 1) {
+
+
+				if (z0e15bc2e85(children[zce99d8264d])) {
+					zce99d8264d--;
+				}
+			}
+		}
+	}
+	return false;
+}
+
+function z12318c022f(zadd1d4cab8, z760580b182, z28855420c6) {
+	if (typeof (zadd1d4cab8.attachEvent) != 'undefined') {
+		zadd1d4cab8.attachEvent(z760580b182, z28855420c6);
+	} else if (typeof (zadd1d4cab8.addEventListener) != 'undefined') {
+		zadd1d4cab8.addEventListener(z760580b182.replace(/^on/, ''), z28855420c6, false);
+	}
+}
+
+function z8683d27ab0(zec137697b6) {
+	if ((parseInt(zec137697b6.style.left) - z06cacefa08) < zf721d3ae0f) {
+		z06cacefa08 = parseInt(zec137697b6.style.left) - zf721d3ae0f;
+	}
+	zec137697b6.style.left = (parseInt(zec137697b6.style.left) - z06cacefa08) + 'px';
+
+	var zb29f1f21a6 = parseInt(zec137697b6.style.width) + z06cacefa08;
+	zec137697b6.style.width = zb29f1f21a6 + 'px';
+	if (zb29f1f21a6 <= 180 - 10 && zb29f1f21a6 >= 10) {
+
+		var zd534eee41a = document.getElementById('repadv' + z17598f85ed);
+		zd534eee41a.style.width = (zb29f1f21a6 - 10) + 'px';
+		if (document.getElementById('repcontent' + z17598f85ed)) {
+			var zade6979b60 = document.getElementById('repcontent' + z17598f85ed);
+			zade6979b60.style.width = (zb29f1f21a6 - 10) + 'px';
+		}
+	}
+	if (zb29f1f21a6 <= 180 - 10 && zb29f1f21a6 >= 10) {
+		var z2f4ca83498 = document.getElementById('divzamknij' + z17598f85ed);
+		var z1ca221ca6f = (zb29f1f21a6 - 10) + 'px';
+		z2f4ca83498.style.width = z1ca221ca6f;
+	}
+	var za7101a62e2 = ((180 - (parseInt(zec137697b6.style.left) - zf721d3ae0f)) * 100) / 180;
+
+	if (za82d863b26 == 1 && za7101a62e2 > 15) {
+		z06cacefa08 -= 1;
+		za82d863b26++;
+	}
+	if (za82d863b26 == 2 && za7101a62e2 > 30) {
+		z06cacefa08 -= 1;
+		za82d863b26++;
+	}
+	if (za82d863b26 == 3 && za7101a62e2 > 45) {
+		z06cacefa08 -= 1;
+		za82d863b26++;
+	}
+	if (za82d863b26 == 4 && za7101a62e2 > 60) {
+		z06cacefa08 -= 2;
+		za82d863b26++;
+	}
+	if (za82d863b26 == 5 && za7101a62e2 > 75) {
+		z06cacefa08 -= 2;
+		za82d863b26++;
+	}
+	if (za82d863b26 == 6 && za7101a62e2 > 90) {
+		z06cacefa08 -= 2;
+		za82d863b26++;
+	}
+	if (parseInt(zec137697b6.style.left) <= zf721d3ae0f) {
+		if (zedabc27e59 == 1) {
+			zedabc27e59 = 2;
+			window.clearTimeout(z76399f8cd5);
+		}
+	}
+}
+
+function zd6c78596fa(zec137697b6) {
+	if ((parseInt(zec137697b6.style.left) + z06cacefa08) > zf721d3ae0f) {
+		z06cacefa08 = zf721d3ae0f - parseInt(zec137697b6.style.left);
+	}
+	zec137697b6.style.left = (parseInt(zec137697b6.style.left) + z06cacefa08) + 'px';
+	var zb29f1f21a6 = parseInt(zec137697b6.style.width) - z06cacefa08;
+
+	if (zb29f1f21a6 <= 180 - 10 && zb29f1f21a6 >= 10) {
+
+		var zd534eee41a = document.getElementById('repadv' + z17598f85ed);
+		zd534eee41a.style.width = (zb29f1f21a6 - 10) + 'px';
+
+		if (document.getElementById('repcontent' + z17598f85ed)) {
+			var zade6979b60 = document.getElementById('repcontent' + z17598f85ed);
+			zade6979b60.style.width = (zb29f1f21a6 - 10) + 'px';
+		}
+	}
+	if (zb29f1f21a6 <= 180 - 10 && zb29f1f21a6 >= 10) {
+		var z2f4ca83498 = document.getElementById('divzamknij' + z17598f85ed);
+		z2f4ca83498.style.width = zb29f1f21a6 + 'px';
+	}
+	zec137697b6.style.width = zb29f1f21a6 + 'px';
+	var za7101a62e2 = ((180 - parseInt(zf721d3ae0f - (parseInt(zec137697b6.style.left)))) * 100) / 180;
+
+	if (za82d863b26 == 1 && za7101a62e2 > 15) {
+		z06cacefa08 -= 1;
+		za82d863b26++;
+	}
+	if (za82d863b26 == 2 && za7101a62e2 > 30) {
+		z06cacefa08 -= 1;
+		za82d863b26++;
+	}
+	if (za82d863b26 == 3 && za7101a62e2 > 45) {
+		z06cacefa08 -= 1;
+		za82d863b26++;
+	}
+	if (za82d863b26 == 4 && za7101a62e2 > 60) {
+		z06cacefa08 -= 2;
+		za82d863b26++;
+	}
+	if (za82d863b26 == 5 && za7101a62e2 > 75) {
+		z06cacefa08 -= 2;
+		za82d863b26++;
+	}
+	if (za82d863b26 == 6 && za7101a62e2 > 90) {
+		z06cacefa08 -= 2;
+		za82d863b26++;
+	}
+	if (parseInt(zec137697b6.style.left) >= zf721d3ae0f) {
+		if (zedabc27e59 == 3) {
+			zedabc27e59 = 4;
+			window.clearTimeout(z76399f8cd5);
+			z851d7fbfb7();
+		}
+	}
+}
+
+function zf6ae4b6a95() {
+	if (z288caec587) {
+		var zc6eb6d7302 = document.body.clientWidth + document.body.scrollLeft;
+	} else {
+		var zc6eb6d7302 = document.body.clientWidth;
+	}
+
+	var z6618d84bf0 = document.getElementById('divarrow' + z17598f85ed);
+	var z725b5a4f0e = document.getElementById('divrun' + z17598f85ed);
+
+	var zd534eee41a = document.getElementById('repadv' + z17598f85ed);
+	var z2f4ca83498 = document.getElementById('divzamknij' + z17598f85ed);
+	var zade6979b60 = document.getElementById('repcontent' + z17598f85ed);
+
+	z6618d84bf0.style.left = zc6eb6d7302 - 20 + 'px';
+	z6618d84bf0.style.width = '20px';
+
+	if (zedabc27e59 == 0) {
+		zbf6983e1ef.style.left = zc6eb6d7302 + 'px';
+	} else if (zedabc27e59 == 1 || zedabc27e59 == 2) {
+		zedabc27e59 = 2;
+		window.clearTimeout(z76399f8cd5);
+		zbf6983e1ef.style.left = zc6eb6d7302 - 180 + 'px';
+		zbf6983e1ef.style.width = '180px';
+		zd534eee41a.style.width = '160px';
+		z2f4ca83498.style.width = '160px';
+		if (zade6979b60) {
+			zade6979b60.style.width = '160px';
+		}
+		z51f4df3a13();
+	} else if (zedabc27e59 == 3 || zedabc27e59 == 4) {
+		zedabc27e59 = 0;
+		window.clearTimeout(z76399f8cd5);
+		z851d7fbfb7();
+		zbf6983e1ef.style.display = 'none';
+		zbf6983e1ef.style.left = zc6eb6d7302 + 'px';
+		zbf6983e1ef.style.width = '0px';
+		zd534eee41a.style.width = '0px';
+		z2f4ca83498.style.width = '0px';
+		if (zade6979b60) {
+			zade6979b60.style.width = '0px';
+		}
+	}
+	zbf6983e1ef.style.height = document.body.clientHeight;
+	if (z288caec587) {
+		zbf6983e1ef.style.top = document.body.scrollTop + 'px';
+		z6618d84bf0.style.top = document.body.scrollTop + 'px';
+		z725b5a4f0e.style.top = document.body.scrollTop + 'px';
+		zc6eb6d7302 = document.body.clientWidth + document.body.scrollLeft;
+		zbf6983e1ef.style.left = zc6eb6d7302 - parseInt(zbf6983e1ef.style.width) + 'px';
+		z6618d84bf0.style.left = zc6eb6d7302 - 20 + 'px';
+		z725b5a4f0e.style.left = zc6eb6d7302 - 20 + 'px';
+	}
+}
+
+function z51f4df3a13() {
+	if (zadd1d4cab8 = document.getElementById('repcontent' + z17598f85ed)) {
+		if (document.body.clientHeight > zc34c7804ad) {
+			zadd1d4cab8.style.display = 'block';
+		} else {
+			zadd1d4cab8.style.display = 'none';
+		}
+	}
+}
+
+function z851d7fbfb7() {
+	var z6618d84bf0 = document.getElementById('divarrow' + z17598f85ed);
+	if (z288caec587) {
+		z6618d84bf0.style.top = document.body.scrollTop + 'px';
+		var zc6eb6d7302 = document.body.clientWidth + document.body.scrollLeft;
+	} else {
+		z6618d84bf0.style.top = '0px';
+		var zc6eb6d7302 = document.body.clientWidth;
+	}
+	z6618d84bf0.style.left = zc6eb6d7302 - 20 + 'px';
+	z6618d84bf0.style.display = 'block';
+
+	var z725b5a4f0e = document.getElementById('divrun' + z17598f85ed);
+	z725b5a4f0e.style.display = 'none';
+}
+
+function z4442576344() {
+	var z725b5a4f0e = document.getElementById('divrun' + z17598f85ed);
+	if (z288caec587) {
+		z725b5a4f0e.style.top = document.body.scrollTop + 'px';
+		var zc6eb6d7302 = document.body.clientWidth + document.body.scrollLeft;
+	} else {
+		z725b5a4f0e.style.top = '0px';
+		var zc6eb6d7302 = document.body.clientWidth;
+	}
+	z725b5a4f0e.style.left = zc6eb6d7302 - 20 + 'px';
+	z725b5a4f0e.style.display = 'block';
+
+	var z6618d84bf0 = document.getElementById('divarrow' + z17598f85ed);
+	z6618d84bf0.style.display = 'none';
+}
+
+function z215baf9f5c() {
+	if (document.getElementById('repadv' + z17598f85ed)) {
+		if (z4b39d16b8a == 1) {
+			var z6618d84bf0 = document.getElementById('divarrow' + z17598f85ed);
+			var z725b5a4f0e = document.getElementById('divrun' + z17598f85ed);
+
+			z6618d84bf0.style.display = 'none';
+			z725b5a4f0e.style.display = 'none';
+
+			za316a0c349 = document.body.clientWidth;
+			if (z288caec587) {
+				za316a0c349 += document.body.scrollLeft;
+			}
+			zf721d3ae0f = za316a0c349 - 180;
+			zbf6983e1ef.style.left = za316a0c349;
+			if (z288caec587) {
+				zbf6983e1ef.style.top = document.body.scrollTop + 'px';
+			} else {
+				zbf6983e1ef.style.top = '0px';
+			}
+			zbf6983e1ef.style.width = '0px';
+			zbf6983e1ef.style.display = 'block';
+			z06cacefa08 = 10;
+			za82d863b26 = 1;
+			z51f4df3a13();
+			z76399f8cd5 = window.setInterval('z8683d27ab0' + '(' + 'zbf6983e1ef' + ')', 30);
+			zedabc27e59 = 1;
+		}
+		z4b39d16b8a = 1;
+	} else {
+		z4442576344();
+		z4df02db767();
+	}
+}
+
+function zb8ab9a8a6f() {
+	if (zedabc27e59 == 2) {
+		zedabc27e59 = 3;
+		za316a0c349 = document.body.clientWidth - 180;
+		if (z288caec587) {
+			za316a0c349 += document.body.scrollLeft;
+		}
+		zf721d3ae0f = za316a0c349 + 180;
+		z06cacefa08 = 10;
+		za82d863b26 = 1;
+		z76399f8cd5 = window.setInterval('zd6c78596fa' + '(' + 'zbf6983e1ef' + ')', 30);
+	}
+}
+
+function z803708d4b2(z654fb65a83) {
+	var z05861d5527;
+	var z567746f7f8 = new RegExp("(http:\/\/)?(www\.)?(([^\.]+)\.)?republika(\.com)?\.pl\/?([^\/]+)?");
+	var zdb5468ea8f = z654fb65a83.match(z567746f7f8);
+
+	if (zdb5468ea8f) {
+		if (zdb5468ea8f[4]) {
+			z05861d5527 = zdb5468ea8f[4];
+		} else {
+			z05861d5527 = zdb5468ea8f[6];
+		}
+		return z05861d5527.replace("-", "_");
+	} else {
+		return '';
+	}
+}
+
+function z04d421033e() {
+	var z15f44b373f = document.location.href;
+	var zde8ce43185 = document.referrer;
+	var z3209cc38cc = window.top.location;
+	var zc7e5603ea1 = z803708d4b2(z15f44b373f);
+	if (zc7e5603ea1 == z803708d4b2(zde8ce43185) && zc7e5603ea1 != '' && z15f44b373f != zde8ce43185 && zde8ce43185 != z3209cc38cc && zde8ce43185.length > 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function zc80ce7b050() {
+	var zc669130907 = '';
+	zc669130907 += '<DIV id="divzamknij' + z17598f85ed + '" style="background-color:white;overflow:hidden;width:0px;">';
+	zc669130907 += '<DIV style="width:160px;overflow:hidden;">';
+	zc669130907 += '<IMG border=0 style="vertical-align:top;cursor:pointer;margin:10px 4px 4px 0px;" src="' + zf0b019a197 + '_d/adv/zwin.gif" width=13 height=13 onclick="' + 'zb8ab9a8a6f' + '();">';
+	zc669130907 += '<A href="' + zf0b019a197 + '" target="_top">';
+	zc669130907 += '<IMG border=0 style="vertical-align:top;margin: 6px 0px 4px 4px;" src="' + zf0b019a197 + '_d/adv/logo3.gif" width=130 height=20>';
+	zc669130907 += '</A>';
+	zc669130907 += '</DIV>';
+	zc669130907 += '</DIV>';
+
+	return zc669130907;
+}
+
+function zf9d7db373a() {
+	if (document.getElementById('divadv' + z17598f85ed)) {
+		return;
+	}
+
+	z0e15bc2e85(document.body);
+	var za532d8151b = document.body;
+	zbf6983e1ef = document.createElement("DIV");
+	za532d8151b.appendChild(zbf6983e1ef);
+	zbf6983e1ef.setAttribute("id", 'divadv' + z17598f85ed);
+
+	zbf6983e1ef.style.display = 'none';
+	zbf6983e1ef.style.backgroundColor = 'white';
+	zbf6983e1ef.style.borderLeftColor = '#DDDDDD';
+	zbf6983e1ef.style.borderLeftWidth = '1px';
+	zbf6983e1ef.style.borderLeftStyle = 'solid';
+	zbf6983e1ef.style.padding = '0px 9px 0px 10px';
+	zbf6983e1ef.style.textAlign = 'left';
+	zbf6983e1ef.style.overflow = 'hidden';
+	zbf6983e1ef.style.width = '0px';
+	zbf6983e1ef.style.height = document.body.clientHeight;
+	zbf6983e1ef.style.zIndex = ++z7d465d2c37;
+	zbf6983e1ef.innerHTML = zc80ce7b050();
+	if (z288caec587) {
+		zbf6983e1ef.style.position = 'absolute';
+	} else {
+		zbf6983e1ef.style.position = 'fixed';
+	}
+
+	var zd128c52053 = document.createElement("DIV");
+	za532d8151b.appendChild(zd128c52053);
+	zd128c52053.setAttribute("id", 'divarrow' + z17598f85ed);
+
+	zd128c52053.style.display = 'none';
+	zd128c52053.style.backgroundColor = 'white';
+	zd128c52053.style.overflow = 'hidden';
+	zd128c52053.style.width = '20px';
+	zd128c52053.style.height = '20px';
+
+	zd128c52053.style.zIndex = ++z7d465d2c37;
+	zd128c52053.innerHTML = '<DIV onclick="' + 'z215baf9f5c' + '();"><IMG style="margin:3px;" src="' + zf0b019a197 + '_d/adv/rozwin.gif" width=13 height=13></DIV>';
+	if (z288caec587) {
+		zd128c52053.style.position = 'absolute';
+	} else {
+		zd128c52053.style.position = 'fixed';
+	}
+
+	var z34686f3af4 = document.createElement("DIV");
+	za532d8151b.appendChild(z34686f3af4);
+	z34686f3af4.setAttribute("id", 'divrun' + z17598f85ed);
+	z34686f3af4.style.display = 'none';
+	z34686f3af4.style.backgroundColor = 'white';
+	z34686f3af4.style.overflow = 'hidden';
+	z34686f3af4.style.width = '20px';
+	z34686f3af4.style.height = '20px';
+	z34686f3af4.style.zIndex = ++z7d465d2c37;
+	z34686f3af4.innerHTML = '<DIV><IMG style="margin:3px;" src="' + zf0b019a197 + '_d/adv/run2.gif" width=13 height=13></DIV>';
+	if (z288caec587) {
+		z34686f3af4.style.position = 'absolute';
+	} else {
+		z34686f3af4.style.position = 'fixed';
+	}
+
+	z12318c022f(window, 'onresize', zf6ae4b6a95);
+	z12318c022f(window, 'onscroll', zf6ae4b6a95);
+	z4c943bd360();
+}
+
+function z4df02db767() {
+	var zd534eee41a = document.getElementById('divadv' + z17598f85ed);
+	var zc669130907 = '';
+	if (sp) {
+		zc669130907 += sp;
+	}
+	zc669130907 += '<iframe style="width:0px;" id="repadv' + z17598f85ed + '" src="' + zf0b019a197 + 'reklama/boxes.html" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" border="0" height="330" onload="' + 'z51f4df3a13' + '();"></iframe>';
+	if (document.body.clientHeight > zc34c7804ad) {
+		zc669130907 += '<iframe style="width:0px;" id="repcontent' + z17598f85ed + '" src="' + zf0b019a197 + 'reklama/autopromo.html" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" border="0" height="200" onload="' + 'z51f4df3a13' + '();"></iframe>';
+	}
+	zd534eee41a.innerHTML += zc669130907;
+
+	z12318c022f(document.getElementById('repadv' + z17598f85ed), 'onload', z215baf9f5c);
+	if (document.body.clientHeight > zc34c7804ad) {
+		z12318c022f(document.getElementById('repcontent' + z17598f85ed), 'onload', z215baf9f5c);
+	} else {
+		z4b39d16b8a = 1;
+
+	}
+}
+
+function z4c943bd360() {
+	if (z04d421033e()) {
+		z851d7fbfb7();
+	} else {
+		z4df02db767();
+	}
+}
+
+function zd361e26441() {
+	return top.frames.length - document.getElementsByTagName("iframe").length;
+}
+
+function z73748219f6(zd8df519567, zfec70e1abf) {
+	if (zd8df519567.document && zd8df519567.document.body && zd8df519567.document.getElementsByTagName("frame").length == 0 &&
+		(zd8df519567.document.getElementsByTagName("iframe").length < zd8df519567.document.body.childNodes.length) &&
+		(z803708d4b2(zd8df519567.location.href) != '' || z2881bfd9f9(zd8df519567.location.href))) {
+
+		var z1180850ad7 = zc7fc038226(zd8df519567);
+		if ((z1180850ad7[1] * z1180850ad7[0]) >= z72368ec77c && z1180850ad7[0] > 250 && z1180850ad7[1] > 350) {
+
+
+			z72368ec77c = z1180850ad7[1] * z1180850ad7[0];
+
+			zb26f5eecf9 = zd8df519567;
+		}
+	}
+	if (zd8df519567.frames.length == 0 || zfec70e1abf > 5) {
+
+		return;
+	}
+	for (var zce99d8264d = 0; zce99d8264d < zd8df519567.frames.length; zce99d8264d++) {
+		if (zd8df519567.frames.item) {
+			try {
+				zd8df519567.frames.item(zce99d8264d).document.body;
+			} catch (z0fcae3df66) {
+				continue;
+			}
+			z73748219f6(zd8df519567.frames.item(zce99d8264d), zfec70e1abf + 1);
+		} else {
+			try {
+				zd8df519567.frames[zce99d8264d].document.body;
+			} catch (z0fcae3df66) {
+				continue;
+			}
+			z73748219f6(zd8df519567.frames[zce99d8264d], zfec70e1abf + 1);
+		}
+	}
+}
+
+function z0ff721fe90() {
+	z73748219f6(window, 0);
+	return zb26f5eecf9;
+}
+
+function zc7fc038226(zd8df519567) {
+	var zc50e40aef3 = 0;
+	var z6fcff21f47 = 0;
+	if (typeof (zd8df519567.innerWidth) == 'number') {
+		zc50e40aef3 = zd8df519567.innerWidth;
+		z6fcff21f47 = zd8df519567.innerHeight;
+	} else if (zd8df519567.document.documentElement && (zd8df519567.document.documentElement.clientWidth || zd8df519567.document.documentElement.clientHeight)) {
+		zc50e40aef3 = zd8df519567.document.documentElement.clientWidth;
+		z6fcff21f47 = zd8df519567.document.documentElement.clientHeight;
+	} else if (zd8df519567.document.body && (zd8df519567.document.body.clientWidth || zd8df519567.document.body.clientHeight)) {
+		zc50e40aef3 = zd8df519567.document.body.clientWidth;
+		z6fcff21f47 = zd8df519567.document.body.clientHeight;
+	}
+	return [zc50e40aef3, z6fcff21f47];
+}
+
+function z1f6ea6cc99() {
+	var z82f6722ffe;
+	var z907cc1f384;
+
+	if (document.all) {
+		z82f6722ffe = document.all.tags('script');
+	} else {
+		z82f6722ffe = document.getElementsByTagName('script');
+	}
+
+	var z756a087273 = /kropka\.onet\.pl\/_s\/kropka\/r\.js\?(\S*)\&RR=/i;
+
+	for (var zce99d8264d = 0; zce99d8264d < z82f6722ffe.length; zce99d8264d++) {
+		var za13b71bf4e = z82f6722ffe[zce99d8264d].text;
+		if (za13b71bf4e.search(z756a087273) > -1) {
+			z907cc1f384 = RegExp.$1;
+			z907cc1f384 = z907cc1f384.split("&");
+			for (var zce99d8264d = 0; zce99d8264d < z907cc1f384.length; zce99d8264d++) {
+				z52754d10b7 = z907cc1f384[zce99d8264d].split("=");
+				z49e00b25ea[z52754d10b7[0]] = z52754d10b7[1];
+			}
+			break;
+		}
+	}
+	return z49e00b25ea;
+}
+
+function z4d9313a780(zadd1d4cab8) {
+	var z16f8c3c593;
+	var z7b5c8c9301 = 0;
+	for (x in zadd1d4cab8[0]) {
+		z16f8c3c593 += x + ': ' + zadd1d4cab8[x] + "\n";
+		if (z7b5c8c9301++ > 10) {
+			alert(z16f8c3c593);
+			z7b5c8c9301 = 0;
+			z16f8c3c593 = '';
+		}
+	}
+	return z16f8c3c593;
+}
+
+function z5727b9df4d() {
+	top.setTimeout('z0df72288fe' + '(1,1)', 100);
+}
+
+function z0df72288fe(zf094c3944e, z7419bae097) {
+	z1f6ea6cc99();
+	if (z49e00b25ea['z'] && z49e00b25ea["z"] == 0) {
+		if (zd361e26441()) {
+			if (top == self) {
+				if (z7419bae097) {
+					z0bad0a0635 = 0;
+				} else {
+					z0bad0a0635++;
+				}
+				zb26f5eecf9 = z0ff721fe90();
+
+				if (zb26f5eecf9 && zb26f5eecf9.document && zb26f5eecf9.document.body) {
+					zb26f5eecf9.zf9d7db373a();
+					z12318c022f(zb26f5eecf9, 'onunload', z5727b9df4d);
+				} else if (z0bad0a0635 < zdb808535b3) {
+					setTimeout('z0df72288fe' + '()', 100);
+				}
+			}
+		} else {
+			zf9d7db373a();
+		}
+	}
+}
+
+document.write(unescape('%3cscript type="text/javascript" ' + ' src="http://republika.onet.pl/_s/sp.js?t=' + (new Date()).getTime() + '"%3e%3c/script%3e'));
+var pp_gemius_identifier = 'd6Ywrc9Mb7TClJLDaK8dhJaE.j0RyeOQsjXGV6jEMiP.L7'; 
+(function() {
+	var frame = self;
+	while (frame != top) {
+		try {
+			if (frame.parent.republikasema5 || !frame.parent.republikasema5) {
+				frame = frame.parent;
+			}
+		} catch (e) {
+			break;
+		}
+	}
+	if (typeof frame.republikasema5 == 'undefined') {
+		frame.republikasema5 = 1;
+		z1f6ea6cc99();
+        onetAds = {
+            'target': 'republika_popup/panel',
+            'async': 1,
+            'no_gemius': 1
+        };
+        document.write('<scr' + 'ipt type="text/javascript" src="//lib.onet.pl/s.csr/init/init.js?v=' + (new Date()).getFullYear() + (new Date()).getMonth() + '"><' + '/script>');
+        // lines below shouldn't be edited
+        function gemius_pending(i) { window[i] = window[i] || function() {var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=arguments;};}; 
+        gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event'); 
+        (function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async'); 
+        gt.setAttribute('defer','defer'); gt.src=l+'://onet.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script'); 
+	}
+})();

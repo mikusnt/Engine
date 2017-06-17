@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1497037442 source:c:\users\ms-1\dysk google\pp\semestr 4\gkiw\projekt - gkiw\parser\parser\main.cpp
+	<stdlib.h>
+	<stdio.h>
+	<fstream>
+	<string.h>
+	<iostream>
+	<conio.h>
+	<algorithm>
+

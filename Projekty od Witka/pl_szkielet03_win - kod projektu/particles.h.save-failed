@@ -1,0 +1,40 @@
+#ifndef PARTICLES_H_INCLUDED
+#define PARTICLES_H_INCLUDED
+
+#include "opengl.h"
+#include <vector>
+#include <iostream>
+#include "constants.h"
+
+using namespace glm;
+
+namespace std {
+    class Particles {
+    private:
+        vec3 position;
+        float min_y;
+        Direction drawDirection;
+        Direction moveDirection;
+        unsigned int maxParticlesCount;
+        float percentY;
+
+    public:
+        void drawSolid();
+        void setPosition(vec3 _position, float _min_y) { position = _position; min_y = _min_y; }
+        void setParticlesCount(unsigned int _particlesCount) { maxParticlesCount = ParticlesCount; }
+        void setPercentY(float _percentY);
+
+        vec3 getPosition() { return position; }
+        float getMin_y() { return min_y; }
+        Direction getDrawDirection() { return drawDirection; }
+        Direction getMoveDirection() { return moveDirection; }
+        unsigned int getMaxParticlesCount() { return maxParticlesCount; }
+        float getPercenyY() { return percentY; }
+
+        Particles(vec3 _position, float _min_y, Direction _drawDirection = dir_down, Direction _moveDirection = dir_down,
+            unsigned int _maxParticlesCount = 100, float _percentY = 100);
+        Particles(Particles &other);
+    };
+}
+
+#endif // PARTICLES_H_INCLUDED
