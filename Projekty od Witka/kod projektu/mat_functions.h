@@ -26,6 +26,7 @@ namespace std {
     mat4 mValve(float pos_x, float pos_z, float min_y, float delta_y, float engine_angle, ValveDirection direction);
     mat4 mValveParticle(vec3 pos, ValveDirection direction);
     mat4 mPistonParticle(vec3 pos);
+    mat4 mIgnition(vec3 centerPos, float engine_angle);
     Direction ValveParticleDir(float engine_angle, ValveDirection direction);
     float ValveParticlePercent(float engine_angle, float minPercent, ValveDirection direction);
     float PistonParticlePercent(float engine_angle, float minPercent);

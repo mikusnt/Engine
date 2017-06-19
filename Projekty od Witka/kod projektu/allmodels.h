@@ -25,5 +25,6 @@ Place, Fifth Floor, Boston, MA  02110 - 1301  USA
 #include "korbowod.h"
 #include "zawor.h"
 #include "particles.h"
+#include "kula_zaplonu.h"
 
 #endif

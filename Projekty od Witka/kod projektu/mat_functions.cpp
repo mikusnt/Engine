@@ -155,6 +155,25 @@ namespace std{
         return percent;
     }
 
+    mat4 mIgnition(vec3 centerPos, float engine_angle) {
+        mat4 M = translate(mat4(1), centerPos);
+        engine_angle -= PI / 12;
+        float scalev = 0;
+        float sin_mul2 = sin(engine_angle * 4);
+        float sin_mul = cos(engine_angle * 2);
+        float cosinus = cos(engine_angle);
+        float cos_div = cos(engine_angle / 2);
+        if (cos_div > 0) {
+            if (cosinus > 0) {
+                if (sin_mul > 0) {
+                    if (sin_mul2 < 0) scalev = 1-sin_mul;
+                }
+            }
+        }
+        M = scale(M, vec3(scalev, scalev, scalev));
+        return M;
+    }
+
     float PistonParticlePercent(float engine_angle, float minPercent) {
         float toFullPercent = 1.0f - minPercent;
         return minPercent + (toFullPercent / 2.0f * ((1 - cos(engine_angle)) + (EngineParams::alfa / 4 * (1 - cos(2*engine_angle)))));

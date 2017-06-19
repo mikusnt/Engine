@@ -71,6 +71,9 @@ float minValveParticlePercent = 0.75f;
 // polozenie czasteczek tlokow
 float max_pistonParticle_y = max_piston_y - 1.5f;
 
+// polozenie kuli zaplonu
+float ignition_y = max_piston_y + 0.7f;
+
 // obiekty czasteczek
 Particles *ParticleValveIn1, *ParticleValveIn2, *ParticleValveIn3, *ParticleValveIn4;
 Particles *ParticleValveOut1, *ParticleValveOut2, *ParticleValveOut3, *ParticleValveOut4;
@@ -82,6 +85,7 @@ vec3 crackshaft_color = vec3(0.8f, 0.8f, 0.8f);
 vec3 crank_color = vec3(0.8f, 0.8f, 0.8f);
 vec3 piston_color = vec3(0.8f, 0.8f, 0.8f);
 vec3 valve_color = vec3(0.2f, 0.2f, 0.2f);
+vec3 ignition_color = vec3(1.0f, 0.0f, 0.0f);
 
 //Procedura obsługi błędów
 void error_callback(int error, const char* description) {
@@ -304,8 +308,33 @@ void drawScene(GLFWwindow* window,float angle_engine,float angle_x, float angle_
     ParticlePiston4->setPercentY(PistonParticlePercent(angle_engine + (2*PI), 0.1f));
     ParticlePiston4->newMoveDraw();
 
+    // tryb kuli zaplonu
+     //glColor3d(0.3f, 0.3f,0.3f); //Ustaw kolor rysowania
+    glEnable(GL_LIGHTING); //Włącz tryb cieniowania
+
+    // kulazaplonu 1
+    M = mIgnition(vec3(piston1_x, ignition_y, 0.0f), angle_engine);
+    glLoadMatrixf(value_ptr(V*M));
+    kula_zaplonu.DrawSolid(ignition_color);
+
+    // kulazaplonu 2
+    M = mIgnition(vec3(piston2_x, ignition_y, 0.0f), angle_engine - PI);
+    glLoadMatrixf(value_ptr(V*M));
+    kula_zaplonu.DrawSolid(ignition_color);
+
+    // kulazaplonu 3
+    M = mIgnition(vec3(piston3_x, ignition_y, 0.0f), angle_engine + PI);
+    glLoadMatrixf(value_ptr(V*M));
+    kula_zaplonu.DrawSolid(ignition_color);
+
+    // kulazaplonu 4
+    M = mIgnition(vec3(piston4_x, ignition_y, 0.0f), angle_engine + (2 * PI));
+    glLoadMatrixf(value_ptr(V*M));
+    kula_zaplonu.DrawSolid(ignition_color);
+
     // tryb obiektow
     glColor3d(0.3f, 0.3f,0.3f); //Ustaw kolor rysowania
+
     glEnable(GL_LIGHTING); //Włącz tryb cieniowania
     glDisable(GL_COLOR_MATERIAL); //Włącz śledzenie kolorów przez materiał
 

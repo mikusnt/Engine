@@ -38,7 +38,7 @@
 			<Add directory="." />
 		</Compiler>
 		<Linker>
-			<Add library="glew/lib/glew32s.lib" />
+			<Add library="glew\lib\glew32s.lib" />
 			<Add library="glfw3" />
 			<Add library="opengl32" />
 			<Add library="gdi32" />
@@ -51,6 +51,11 @@
 		<Unit filename="korbowod.cpp" />
 		<Unit filename="korbowod.h" />
 		<Unit filename="korbowod_data.h" />
+		<Unit filename="kula_zaplonu.cpp" />
+		<Unit filename="kula_zaplonu.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="kula_zaplonu_data.h" />
 		<Unit filename="lodepng.cpp" />
 		<Unit filename="lodepng.h" />
 		<Unit filename="main_file.cpp" />
