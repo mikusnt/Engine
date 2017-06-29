@@ -1,0 +1,24 @@
+#include "korbowod.h"
+#include "korbowod_data.h"
+
+namespace std {
+
+    Korbowod korbowod;
+
+void Korbowod::DrawSolid(GLuint *tex, int number) {
+    glBindTexture(GL_TEXTURE_2D,tex[number]);
+    glEnableClientState(GL_VERTEX_ARRAY); //Podczas rysowania u¿ywaj tablicy wierzcho³ków
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+    glEnableClientState(GL_NORMAL_ARRAY);
+
+    glVertexPointer(3,GL_FLOAT,0,korbowodPositions); //Ustaw tablicê myCubeVertices jako tablicê wierzcho³ków
+    glNormalPointer( GL_FLOAT, 0, korbowodNormals);
+    glTexCoordPointer( 2, GL_FLOAT, 0, korbowodTexels);
+
+    glDrawArrays(GL_TRIANGLES,0,korbowodVertices); //Rysuj model
+
+    glDisableClientState(GL_VERTEX_ARRAY);
+    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+    glDisableClientState(GL_NORMAL_ARRAY);
+}
+}
