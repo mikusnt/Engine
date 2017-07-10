@@ -62,16 +62,16 @@ namespace std{
             case valve_in: {
                 if (sinus_div > 0) {
                     if (sinus < 0) {
-                        pos_y = min_y + delta_y * absSin(sinus, EngineParams::sinCut);
-                        pos_z = pos_z - delta_y * absSin(sinus, EngineParams::sinCut) * EngineParams::valveAngle;
+                        pos_y = min_y - delta_y * absSin(sinus, EngineParams::sinCut);
+                        pos_z = pos_z + delta_y * absSin(sinus, EngineParams::sinCut) * EngineParams::valveAngle;
                     }
                 }
             } break;
             case valve_out: {
                 if (sinus_div < 0) {
                     if (sinus > 0) {
-                        pos_y = min_y + delta_y * absSin(sinus, EngineParams::sinCut);
-                        pos_z = pos_z + delta_y * absSin(sinus, EngineParams::sinCut)* EngineParams::valveAngle;
+                        pos_y = min_y - delta_y * absSin(sinus, EngineParams::sinCut);
+                        pos_z = pos_z - delta_y * absSin(sinus, EngineParams::sinCut)* EngineParams::valveAngle;
                     }
                 }
             } break;
